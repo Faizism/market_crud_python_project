@@ -27,3 +27,19 @@ print(f"Anggur {amount_grape} x {price_grape} = {total_price_grape}")
 total_cost = total_price_apple + total_price_orange + total_price_grape
 
 print(f"\nTotal : {total_cost}\n")
+
+### JCDS 0412 - 03/10/2024
+### Exercise 2
+amount_money = input("Masukkan jumlah uang : ")
+amount_money = int(amount_money)
+
+if(amount_money < total_cost):
+   print("Transaksi anda dibatalkan")
+   short = (total_cost - amount_money)
+   print(f"uangnya kurang sebesar {short}")
+elif (amount_money == total_cost):
+   print("Terimakasih")
+else :
+   print("Terimakasih\n")
+   change = (amount_money-total_cost)
+   print(f"Uang kembali anda {change}")
