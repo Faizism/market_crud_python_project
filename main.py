@@ -43,11 +43,10 @@ if user_menu == 3 :
     print(f"{('index').ljust(20)}|{('Nama').ljust(20)}|{('Stok').ljust(20)}|Harga")
     for i in dict_fruit :
         print (f"{str(i).ljust(20)}|{str(dict_fruit[i]['Nama']).ljust(20)}|{str(dict_fruit[i]['Stok']).ljust(20)}|{str(dict_fruit[i]['Harga']).ljust(20)}")
-    
     erased_fruit = int(input("Masukkan index buah yang ingin dihapus : "))
     del dict_fruit[erased_fruit]
-    for i in (dict_fruit) :
-        print (f"{str(i).ljust(20)}|{str(dict_fruit[i]['Nama']).ljust(20)}|{str(dict_fruit[i]['Stok']).ljust(20)}|{str(dict_fruit[i]['Harga']).ljust(20)}")
+    for i, key in enumerate(dict_fruit) :
+        print (f"{str(i).ljust(20)}|{str(dict_fruit[key]['Nama']).ljust(20)}|{str(dict_fruit[key]['Stok']).ljust(20)}|{str(dict_fruit[key]['Harga']).ljust(20)}")
     
 # Membeli Buah
 if user_menu == 4 :
@@ -108,36 +107,3 @@ elif user_menu == 5 :
 
 else:
     print ("menu tidak tersedia")
-# # perhitungan total harga yang akan dibayarkan
-
-# total_price_apple = price_apple*amount_apple
-# total_price_orange = price_orange*amount_orange
-# total_price_grape = price_grape*amount_grape
-
-# print(f"Apel {amount_apple} x {price_apple} = {total_price_apple}")
-# print(f"Jeruk {amount_orange} x {price_orange} = {total_price_orange}")
-# print(f"Anggur {amount_grape} x {price_grape} = {total_price_grape}")
-
-# total_cost = total_price_apple + total_price_orange + total_price_grape
-
-# print(f"\nTotal : {total_cost}\n")
-
-# ### JCDS 0412 - 03/10/2024
-# ### Exercise 2
-# # user menginput jumlah uang yang akan dikeluarkan
-# amount_money = input("Masukkan jumlah uang : ")
-# amount_money = int(amount_money)
-
-# # validasi uang dari user
-# while(amount_money < total_cost):
-#    print("Transaksi anda dibatalkan")
-#    short = (total_cost - amount_money)
-#    print(f"uangnya kurang sebesar {short}")
-#    amount_money = input("Masukkan jumlah uang : ")
-#    amount_money = int(amount_money)
-# if (amount_money == total_cost):
-#    print("Terimakasih")
-# else :
-#    print("Terimakasih\n")
-#    change = (amount_money-total_cost)
-#    print(f"Uang kembali anda {change}")
